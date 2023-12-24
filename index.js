@@ -10,7 +10,9 @@ const nameUser = document.querySelector("#nameUser");
 const loginUser = document.querySelector("#loginUser");
 const followers = document.querySelector("#followers");
 const following = document.querySelector("#following");
+const repositorios = document.querySelector("#repositorios");
 const locationUser = document.querySelector("#location");
+const linkRepositorios = document.querySelector("#linkRepositorios");
 
 searchUserForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -21,7 +23,7 @@ searchUserForm.addEventListener("submit", async (event) => {
 
   const username = usernameInput.value;
   usernameInput.value = "";
-  
+
   await searchInfo(username);
 
   loadContainer.style.display = "none";
@@ -33,19 +35,22 @@ async function searchInfo(username) {
     const data = await response.json();
 
     userInfo.style.display = "flex";
-    adicionarInfo(data);
+    adicionarInfo(data,username);
+    console.log(data);
   } else {
     errorUser.style.display = "flex";
   }
 }
 
-function adicionarInfo(userData) {
+function adicionarInfo(userData,username) {
   imageUser.src = userData.avatar_url;
   nameUser.innerHTML = userData.name;
   loginUser.innerHTML = userData.login;
   followers.innerHTML = userData.followers;
   following.innerHTML = userData.following;
   locationUser.innerHTML = userData.location;
+  repositorios.innerHTML = userData.public_repos;
+  linkRepositorios.setAttribute('href',`repositorios.html?user=${username}`)
 }
 
 function recuperarDarkMode() {
