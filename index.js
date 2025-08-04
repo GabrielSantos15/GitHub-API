@@ -13,6 +13,7 @@ const following = document.querySelector("#following");
 const repositorios = document.querySelector("#repositorios");
 const locationUser = document.querySelector("#location");
 const linkRepositorios = document.querySelector("#linkRepositorios");
+const statusUser = document.querySelector("#StatusPerfil img")
 
 searchUserForm.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -51,6 +52,8 @@ function adicionarInfo(userData,username) {
   locationUser.innerHTML = userData.location;
   repositorios.innerHTML = userData.public_repos;
   linkRepositorios.setAttribute('href',`repositorios.html?user=${username}`)
+  statusUser.src = `https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&locale=pt-br&bg_color=00000000&title_color=9A84DB&text_color=9A84DB&icon_color=9A84DB`
+  
 }
 
 function recuperarDarkMode() {

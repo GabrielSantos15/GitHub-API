@@ -12,8 +12,8 @@
     --corfundo: #e2e2e2;
     --corCard: #f5f5f5;
 
-    --corfundoDark: #100042;
-    --corCardDark: #2F1775;
+    --corfundoDark: #010127;
+    --corCardDark: #2a1d53;
 
 
     --corTema: #5D43A8;
@@ -83,6 +83,11 @@ main {
 
     gap: 20px;
     padding: 25px;
+}
+
+main p{
+    width: min(500px,100%);
+    text-align: center;
 }
 
 .card {
@@ -179,6 +184,14 @@ main {
     font-size: 1.3rem;
     color: var(--corTema);
 }
+
+
+#StatusPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #containerRepositorios {
     display: flex;

@@ -20,6 +20,8 @@
         </i>
     </header>
     <main>
+        <p>Digite seu nome de usuário para visualizar informações do seu perfil
+        </p>
         <section id="formulario" class="card">
             <form id="searchUserForm">
                 <input type="text" id="userNameInput" required>
@@ -37,14 +39,14 @@
             </picture>
             <h2 id="nameUser"></h2>
             <h3 id="loginUser"></h3>
-            <div id="ContainerLocation">
+            <article id="ContainerLocation">
                 <i class="material-symbols-outlined">
                     location_on
                 </i>
                 <h3 id="location"></h3>
-            </div>
+            </article>
 
-            <div id="containerSeguidor">
+            <article id="containerSeguidor">
                 <span>
                     <label for="followers">seguidores</label>
                     <output id="followers"></output>
@@ -53,12 +55,15 @@
                     <label for="following">seguindo</label>
                     <output id="following"></output>
                 </span>
-            </div>
-            <div id="containerRepositorios">
+            </article>
+            <article id="containerRepositorios">
                 <label for="repositorios">Repositorios</label>
                 <output id="repositorios"></output>
-            </div>
+            </article>
             <a id="linkRepositorios">Ver repositorios</a>
+            <article id="StatusPerfil">
+                <img/>
+            </article>
         </section>
 
         <section id="containerLoad" class="card">
